@@ -17,7 +17,13 @@ class cGptHandler():
 
         return response.choices[0].message.content
 
+
 if __name__ == "__main__":
-    oGptHandler = cGptHandler()
-    oGptHandler.send_and_acquire_response()
-    pass
+    str_openai_api_key : str = "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"            #Enter OpenAI API key here
+    while True:
+        print("How can I help you today?")
+        message : str = input()
+        oGptHandler = cGptHandler()
+        response = oGptHandler.send_and_acquire_response(str_openai_api_key, "gpt-3.5-turbo", message)
+        print(response)
+        pass

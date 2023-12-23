@@ -2,10 +2,11 @@ import speech_recognition as sr
 
 
 class cVoiceRecognition():
-    def __init__(self):
+    def __init__(self) -> None:
         self.recognizer = sr.Recognizer()
+        pass
 
-    def record_speech_to_text(self):
+    def record_speech_to_text(self) -> str:
         while True:
             try:
                 with sr.Microphone() as mic:
